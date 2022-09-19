@@ -27,3 +27,10 @@ For more info, keep an eye on the JupyterLite documentation:
 
 - How-to Guides: https://jupyterlite.readthedocs.io/en/latest/howto/index.html
 - Reference: https://jupyterlite.readthedocs.io/en/latest/reference/index.html
+
+## Local
+
+```bash
+jupyter lite build --contents content --output-dir dist
+jupyter lite serve --output-dir dist
+```
