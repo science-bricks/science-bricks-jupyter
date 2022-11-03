@@ -133,32 +133,6 @@ css = ["tinycss2 (>=1.1.0,<1.2)"]
 dev = ["Sphinx (==4.3.2)", "black (==22.3.0)", "build (==0.8.0)", "flake8 (==4.0.1)", "hashin (==0.17.0)", "mypy (==0.961)", "pip-tools (==6.6.2)", "pytest (==7.1.2)", "tox (==3.25.0)", "twine (==4.0.1)", "wheel (==0.37.1)"]
 
 [[package]]
-name = "bqplot"
-version = "0.12.36"
-description = "Interactive plotting for the Jupyter notebook, using d3.js and ipywidgets."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-ipywidgets = ">=7.5.0,<9"
-numpy = ">=1.10.4,<2.0.0"
-pandas = ">=1.0.0,<2.0.0"
-traitlets = ">=4.3.0"
-traittypes = ">=0.0.6"
-
-[[package]]
-name = "branca"
-version = "0.5.0"
-description = "Generate complex HTML+JS pages with Python"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[package.dependencies]
-jinja2 = "*"
-
-[[package]]
 name = "certifi"
 version = "2022.9.24"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -346,34 +320,6 @@ perf = ["ipython"]
 testing = ["flake8 (<5)", "flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf (>=0.9.2)"]
 
 [[package]]
-name = "ipycanvas"
-version = "0.13.1"
-description = "Interactive widgets library exposing the browser's Canvas API"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-ipywidgets = ">=7.6.0,<9"
-numpy = "*"
-pillow = ">=6.0"
-
-[[package]]
-name = "ipyevents"
-version = "2.0.1"
-description = "A custom widget for returning mouse and keyboard events to Python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-ipywidgets = ">=7.6.0"
-
-[package.extras]
-docs = ["jupyterlab (>=3)", "nbsphinx", "sphinx"]
-test = ["nbval", "pytest", "pytest-cov"]
-
-[[package]]
 name = "ipykernel"
 version = "6.17.0"
 description = "IPython Kernel for Jupyter"
@@ -397,20 +343,6 @@ traitlets = ">=5.1.0"
 [package.extras]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-alt"]
 test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-cov", "pytest-timeout"]
-
-[[package]]
-name = "ipyleaflet"
-version = "0.17.2"
-description = "A Jupyter widget for dynamic Leaflet maps"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-branca = ">=0.5.0"
-ipywidgets = ">=7.6.0,<9"
-traittypes = ">=0.2.1,<3"
-xyzservices = ">=2021.8.1"
 
 [[package]]
 name = "ipympl"
@@ -639,39 +571,12 @@ test = ["check-manifest", "coverage", "jupyterlab-server[test]", "pre-commit", "
 ui-tests = ["build"]
 
 [[package]]
-name = "jupyterlab-drawio"
-version = "0.9.0"
-description = "A JupyterLab extension for embedding drawio / mxgraph."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-jupyterlab = ">=3.0.0,<4.0.0"
-
-[[package]]
-name = "jupyterlab-fasta"
-version = "3.2.0"
-description = "Fasta renderer for JupyterLab"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
 name = "jupyterlab-filesystem-access"
 version = "0.5.2"
 description = "Mount local files using the Filesystem API"
 category = "main"
 optional = false
 python-versions = ">=3.7"
-
-[[package]]
-name = "jupyterlab-geojson"
-version = "3.2.0"
-description = "GeoJSON renderer for JupyterLab"
-category = "main"
-optional = false
-python-versions = ">=3.6"
 
 [[package]]
 name = "jupyterlab-pygments"
@@ -691,6 +596,7 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 babel = "*"
+importlib-metadata = {version = ">=4.8.3", markers = "python_version < \"3.10\""}
 jinja2 = ">=3.0.3"
 json5 = "*"
 jsonschema = ">=3.0.1"
@@ -721,6 +627,7 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 doit = ">=0.34,<1"
+importlib_metadata = {version = ">=3.6", markers = "python_version < \"3.10\""}
 jupyter_core = ">=4.7"
 
 [package.extras]
@@ -733,14 +640,6 @@ piplite = ["pkginfo"]
 serve = ["tornado (>=6.1)"]
 test = ["ansi2html", "diffoscope", "pytest-console-scripts", "pytest-cov", "pytest-html", "pytest-xdist"]
 translation = ["jupyterlab_server (>=2.8.1,<3)"]
-
-[[package]]
-name = "jupyterlite-p5-kernel"
-version = "0.1.0a12"
-description = "JupyterLite - p5.js Kernel Extension"
-category = "main"
-optional = false
-python-versions = ">=3.6"
 
 [[package]]
 name = "kiwisolver"
@@ -799,7 +698,7 @@ python-versions = "*"
 
 [[package]]
 name = "nbclassic"
-version = "0.4.7"
+version = "0.4.8"
 description = "A web-based notebook environment for interactive computing"
 category = "main"
 optional = false
@@ -827,7 +726,7 @@ traitlets = ">=4.2.1"
 [package.extras]
 docs = ["myst-parser", "nbsphinx", "sphinx", "sphinx-rtd-theme", "sphinxcontrib-github-alt"]
 json-logging = ["json-logging"]
-test = ["coverage", "nbval", "pytest", "pytest-cov", "pytest-tornasync", "requests", "requests-unixsocket", "selenium (==4.1.5)", "testpath"]
+test = ["coverage", "nbval", "pytest", "pytest-cov", "pytest-playwright", "pytest-tornasync", "requests", "requests-unixsocket", "testpath"]
 
 [[package]]
 name = "nbclient"
@@ -859,6 +758,7 @@ python-versions = ">=3.7"
 beautifulsoup4 = "*"
 bleach = "*"
 defusedxml = "*"
+importlib-metadata = {version = ">=3.6", markers = "python_version < \"3.10\""}
 jinja2 = ">=3.0"
 jupyter-core = ">=4.7"
 jupyterlab-pygments = "*"
@@ -974,12 +874,15 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 name = "pandas"
 version = "1.5.1"
 description = "Powerful data structures for data analysis, time series, and statistics"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 
 [package.dependencies]
-numpy = {version = ">=1.21.0", markers = "python_version >= \"3.10\""}
+numpy = [
+    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
+    {version = ">=1.20.3", markers = "python_version < \"3.10\""},
+]
 python-dateutil = ">=2.8.1"
 pytz = ">=2020.1"
 
@@ -1038,17 +941,6 @@ docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues
 tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
 [[package]]
-name = "plotly"
-version = "5.11.0"
-description = "An open-source, interactive data visualization library for Python"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-tenacity = ">=6.2.0"
-
-[[package]]
 name = "prometheus-client"
 version = "0.15.0"
 description = "Python client for the Prometheus monitoring system."
@@ -1061,7 +953,7 @@ twisted = ["twisted"]
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.31"
+version = "3.0.32"
 description = "Library for building powerful interactive command lines in Python"
 category = "main"
 optional = false
@@ -1296,17 +1188,6 @@ pure-eval = "*"
 tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
-name = "tenacity"
-version = "8.1.0"
-description = "Retry code until it succeeds"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-doc = ["reno", "sphinx", "tornado (>=4.5)"]
-
-[[package]]
 name = "terminado"
 version = "0.17.0"
 description = "Tornado websocket backend for the Xterm.js Javascript terminal emulator library."
@@ -1367,20 +1248,6 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["pre-commit", "pytest"]
 
 [[package]]
-name = "traittypes"
-version = "0.2.1"
-description = "Scipy trait types"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-traitlets = ">=4.2.2"
-
-[package.extras]
-test = ["numpy", "pandas", "pytest", "xarray"]
-
-[[package]]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -1439,14 +1306,6 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "xyzservices"
-version = "2022.9.0"
-description = "Source of XYZ tiles providers"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
 name = "zipp"
 version = "3.10.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -1460,8 +1319,8 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.10"
-content-hash = "3973e70a70023759daf9e586fb788e86847e223a9233de1194974efaf544c3d0"
+python-versions = "^3.9"
+content-hash = "4ad9413c9adca277195214da2916e2d3a47c14d5838020537a5b432e2b6d774c"
 
 [metadata.files]
 anyio = [
@@ -1522,14 +1381,6 @@ beautifulsoup4 = [
 bleach = [
     {file = "bleach-5.0.1-py3-none-any.whl", hash = "sha256:085f7f33c15bd408dd9b17a4ad77c577db66d76203e5984b1bd59baeee948b2a"},
     {file = "bleach-5.0.1.tar.gz", hash = "sha256:0d03255c47eb9bd2f26aa9bb7f2107732e7e8fe195ca2f64709fcf3b0a4a085c"},
-]
-bqplot = [
-    {file = "bqplot-0.12.36-py2.py3-none-any.whl", hash = "sha256:d636ba9471d51dfb0b68d246ced6febdd7e4050cfadb755a16b8e22b8f019edf"},
-    {file = "bqplot-0.12.36.tar.gz", hash = "sha256:6a553e55fdbcc4f62e05679bd74b2549d1efbe43e120ad3b0bcb03a65c7921af"},
-]
-branca = [
-    {file = "branca-0.5.0-py3-none-any.whl", hash = "sha256:781ff32bf82979584b0004bd84c254cfccda26bc31b2f7333346d03fb7b97741"},
-    {file = "branca-0.5.0.tar.gz", hash = "sha256:e6f2f7eba7dd368ceef8f63822b867f5e11d4d3abdd099a787db9ed2b7065ae1"},
 ]
 certifi = [
     {file = "certifi-2022.9.24-py3-none-any.whl", hash = "sha256:90c1a32f1d68f940488354e36370f6cca89f0f106db09518524c88d6ed83f382"},
@@ -1744,21 +1595,9 @@ importlib-metadata = [
     {file = "importlib_metadata-5.0.0-py3-none-any.whl", hash = "sha256:ddb0e35065e8938f867ed4928d0ae5bf2a53b7773871bfe6bcc7e4fcdc7dea43"},
     {file = "importlib_metadata-5.0.0.tar.gz", hash = "sha256:da31db32b304314d044d3c12c79bd59e307889b287ad12ff387b3500835fc2ab"},
 ]
-ipycanvas = [
-    {file = "ipycanvas-0.13.1-py2.py3-none-any.whl", hash = "sha256:53771e27a86de5b153873a4ffd495fddbf530990fb5609f20fb59ab95ce33035"},
-    {file = "ipycanvas-0.13.1.tar.gz", hash = "sha256:f9c3940681bc38383390f8c46ea5d8445d6e11c6da6484c37d89df5ae1dac131"},
-]
-ipyevents = [
-    {file = "ipyevents-2.0.1-py2.py3-none-any.whl", hash = "sha256:9f255fdab40e7598b1143ace90153c5f4e52be15dc6f1b94f575a043a5970c17"},
-    {file = "ipyevents-2.0.1.tar.gz", hash = "sha256:23eb2afab13d9056397f120a88051dd3beb067b698d08b33adffc9e077f019cb"},
-]
 ipykernel = [
     {file = "ipykernel-6.17.0-py3-none-any.whl", hash = "sha256:301fdb487587c9bf277025001da97b53697aab73ae1268d9d1ba972a2c5fc801"},
     {file = "ipykernel-6.17.0.tar.gz", hash = "sha256:e195cf6d8c3dd5d41f3cf8ad831d9891f95d7d18fa6d5fb4d30a713df99b26a4"},
-]
-ipyleaflet = [
-    {file = "ipyleaflet-0.17.2-py3-none-any.whl", hash = "sha256:7deaed9ec5dbfd53ac020cf5d9046ed34ca9aa7e580ca7b131e30fb78500aa7f"},
-    {file = "ipyleaflet-0.17.2.tar.gz", hash = "sha256:811ceb4a15589aa034a80724cfe5bdc93689563b889f4b9bed3d5e3bcb7626bb"},
 ]
 ipympl = [
     {file = "ipympl-0.9.2-py2.py3-none-any.whl", hash = "sha256:655604f0bf6d264cf599766950a5b26e292d107cc23e197503647e75417981cc"},
@@ -1808,21 +1647,9 @@ jupyterlab = [
     {file = "jupyterlab-3.5.0-py3-none-any.whl", hash = "sha256:f433059fe0e12d75ea90a81a0b6721113bb132857e3ec2197780b6fe84cbcbde"},
     {file = "jupyterlab-3.5.0.tar.gz", hash = "sha256:e02556c8ea1b386963c4b464e4618aee153c5416b07ab481425c817a033323a2"},
 ]
-jupyterlab-drawio = [
-    {file = "jupyterlab-drawio-0.9.0.tar.gz", hash = "sha256:972cf2007ee654d97a836a1fa4c32c0eed9955db84c576ea7d9e52e5c62cc626"},
-    {file = "jupyterlab_drawio-0.9.0-py3-none-any.whl", hash = "sha256:51d481a6366537a0eafb514ecdec1ba384d7930d3a285df8878150780d02d93b"},
-]
-jupyterlab-fasta = [
-    {file = "jupyterlab-fasta-3.2.0.tar.gz", hash = "sha256:e9ce735b59bf25a0882dd8fdfe0de4b612e1890adf96eef859ae259b2bedc2b5"},
-    {file = "jupyterlab_fasta-3.2.0-py3-none-any.whl", hash = "sha256:9b6ea7bc0386d35bc939948f62a566abbd124b49bf2c965e38b51e9ea62c1425"},
-]
 jupyterlab-filesystem-access = [
     {file = "jupyterlab-filesystem-access-0.5.2.tar.gz", hash = "sha256:cc7487a14fe1756baa6862188e19e54d002f67ab83d9a0928c784d7fcfd22703"},
     {file = "jupyterlab_filesystem_access-0.5.2-py3-none-any.whl", hash = "sha256:ff429606a0747dd00ac4a16c9668ad6e7fc01bfccf8a1c740f9e4e1c12fb78f9"},
-]
-jupyterlab-geojson = [
-    {file = "jupyterlab-geojson-3.2.0.tar.gz", hash = "sha256:9c1515101949b631589e3bd24d6bdd90421dd37948f9bd70879263925458b554"},
-    {file = "jupyterlab_geojson-3.2.0-py3-none-any.whl", hash = "sha256:3ce611d9b0c586bc353c46a90e0350f30f3f59e0feaaec909fef47a5eb293718"},
 ]
 jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.2.2-py2.py3-none-any.whl", hash = "sha256:2405800db07c9f770863bcf8049a529c3dd4d3e28536638bd7c1c01d2748309f"},
@@ -1839,10 +1666,6 @@ jupyterlab-widgets = [
 jupyterlite = [
     {file = "jupyterlite-0.1.0b14-py3-none-any.whl", hash = "sha256:58fccfb099ba78364e2fc77f258bd6d6dd58891967ba07ba7296daf0a81f4dbd"},
     {file = "jupyterlite-0.1.0b14.tar.gz", hash = "sha256:ee3fac524a13e7f3bdb5bebb72ec65d88fe722e181e4654b734814b03caeb2fb"},
-]
-jupyterlite-p5-kernel = [
-    {file = "jupyterlite-p5-kernel-0.1.0a12.tar.gz", hash = "sha256:249bb7ae28e62069aea67016294ebbb0cbb39fe53f0a02d115f3fc0cfdcfad51"},
-    {file = "jupyterlite_p5_kernel-0.1.0a12-py3-none-any.whl", hash = "sha256:492438e33824a50c587997480d5c89ae4fb2776d6560a9d02c8967aa03b2a58c"},
 ]
 kiwisolver = [
     {file = "kiwisolver-1.4.4-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:2f5e60fabb7343a836360c4f0919b8cd0d6dbf08ad2ca6b9cf90bf0c76a3c4f6"},
@@ -2008,8 +1831,8 @@ mistune = [
     {file = "mistune-2.0.4.tar.gz", hash = "sha256:9ee0a66053e2267aba772c71e06891fa8f1af6d4b01d5e84e267b4570d4d9808"},
 ]
 nbclassic = [
-    {file = "nbclassic-0.4.7-py3-none-any.whl", hash = "sha256:d71d18aa6605eaf59e9b99b34c96360af45847f2a30ee2fefbe2f7bed4bc3df2"},
-    {file = "nbclassic-0.4.7.tar.gz", hash = "sha256:1e0470583b55089c427940ed31b8a866ffef7ccab101494e409efe5ac7ba9897"},
+    {file = "nbclassic-0.4.8-py3-none-any.whl", hash = "sha256:cbf05df5842b420d5cece0143462380ea9d308ff57c2dc0eb4d6e035b18fbfb3"},
+    {file = "nbclassic-0.4.8.tar.gz", hash = "sha256:c74d8a500f8e058d46b576a41e5bc640711e1032cf7541dde5f73ea49497e283"},
 ]
 nbclient = [
     {file = "nbclient-0.7.0-py3-none-any.whl", hash = "sha256:434c91385cf3e53084185334d675a0d33c615108b391e260915d1aa8e86661b8"},
@@ -2175,17 +1998,13 @@ pillow = [
     {file = "Pillow-9.3.0-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:073adb2ae23431d3b9bcbcff3fe698b62ed47211d0716b067385538a1b0f28b8"},
     {file = "Pillow-9.3.0.tar.gz", hash = "sha256:c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"},
 ]
-plotly = [
-    {file = "plotly-5.11.0-py2.py3-none-any.whl", hash = "sha256:52fd74b08aa4fd5a55b9d3034a30dbb746e572d7ed84897422f927fdf687ea5f"},
-    {file = "plotly-5.11.0.tar.gz", hash = "sha256:4efef479c2ec1d86dcdac8405b6ca70ca65649a77408e39a7e84a1ea2db6c787"},
-]
 prometheus-client = [
     {file = "prometheus_client-0.15.0-py3-none-any.whl", hash = "sha256:db7c05cbd13a0f79975592d112320f2605a325969b270a94b71dcabc47b931d2"},
     {file = "prometheus_client-0.15.0.tar.gz", hash = "sha256:be26aa452490cfcf6da953f9436e95a9f2b4d578ca80094b4458930e5f584ab1"},
 ]
 prompt-toolkit = [
-    {file = "prompt_toolkit-3.0.31-py3-none-any.whl", hash = "sha256:9696f386133df0fc8ca5af4895afe5d78f5fcfe5258111c2a79a1c3e41ffa96d"},
-    {file = "prompt_toolkit-3.0.31.tar.gz", hash = "sha256:9ada952c9d1787f52ff6d5f3484d0b4df8952787c087edf6a1f7c2cb1ea88148"},
+    {file = "prompt_toolkit-3.0.32-py3-none-any.whl", hash = "sha256:24becda58d49ceac4dc26232eb179ef2b21f133fecda7eed6018d341766ed76e"},
+    {file = "prompt_toolkit-3.0.32.tar.gz", hash = "sha256:e7f2129cba4ff3b3656bbdda0e74ee00d2f874a8bcdb9dd16f5fec7b3e173cae"},
 ]
 psutil = [
     {file = "psutil-5.9.3-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:b4a247cd3feaae39bb6085fcebf35b3b8ecd9b022db796d89c8f05067ca28e71"},
@@ -2413,10 +2232,6 @@ stack-data = [
     {file = "stack_data-0.6.0-py3-none-any.whl", hash = "sha256:b92d206ef355a367d14316b786ab41cb99eb453a21f2cb216a4204625ff7bc07"},
     {file = "stack_data-0.6.0.tar.gz", hash = "sha256:8e515439f818efaa251036af72d89e4026e2b03993f3453c000b200fb4f2d6aa"},
 ]
-tenacity = [
-    {file = "tenacity-8.1.0-py3-none-any.whl", hash = "sha256:35525cd47f82830069f0d6b73f7eb83bc5b73ee2fff0437952cedf98b27653ac"},
-    {file = "tenacity-8.1.0.tar.gz", hash = "sha256:e48c437fdf9340f5666b92cd7990e96bc5fc955e1298baf4a907e3972067a445"},
-]
 terminado = [
     {file = "terminado-0.17.0-py3-none-any.whl", hash = "sha256:bf6fe52accd06d0661d7611cc73202121ec6ee51e46d8185d489ac074ca457c2"},
     {file = "terminado-0.17.0.tar.gz", hash = "sha256:520feaa3aeab8ad64a69ca779be54be9234edb2d0d6567e76c93c2c9a4e6e43f"},
@@ -2446,10 +2261,6 @@ traitlets = [
     {file = "traitlets-5.5.0-py3-none-any.whl", hash = "sha256:1201b2c9f76097195989cdf7f65db9897593b0dfd69e4ac96016661bb6f0d30f"},
     {file = "traitlets-5.5.0.tar.gz", hash = "sha256:b122f9ff2f2f6c1709dab289a05555be011c87828e911c0cf4074b85cb780a79"},
 ]
-traittypes = [
-    {file = "traittypes-0.2.1-py2.py3-none-any.whl", hash = "sha256:1340af133810b6eee1a2eb2e988f862b0d12b6c2d16f282aaf3207b782134c2e"},
-    {file = "traittypes-0.2.1.tar.gz", hash = "sha256:be6fa26294733e7489822ded4ae25da5b4824a8a7a0e0c2dccfde596e3489bd6"},
-]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
     {file = "typing_extensions-4.4.0.tar.gz", hash = "sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa"},
@@ -2473,10 +2284,6 @@ websocket-client = [
 widgetsnbextension = [
     {file = "widgetsnbextension-4.0.3-py3-none-any.whl", hash = "sha256:7f3b0de8fda692d31ef03743b598620e31c2668b835edbd3962d080ccecf31eb"},
     {file = "widgetsnbextension-4.0.3.tar.gz", hash = "sha256:34824864c062b0b3030ad78210db5ae6a3960dfb61d5b27562d6631774de0286"},
-]
-xyzservices = [
-    {file = "xyzservices-2022.9.0-py3-none-any.whl", hash = "sha256:5547b3d6bc06a60561d039fc9ef5fd521d8bea9b6b3d617410fd764b30c6c2bd"},
-    {file = "xyzservices-2022.9.0.tar.gz", hash = "sha256:55651961708b9a14849978b339df76008c886df7a8326308a5549bae5516260c"},
 ]
 zipp = [
     {file = "zipp-3.10.0-py3-none-any.whl", hash = "sha256:4fcb6f278987a6605757302a6e40e896257570d11c51628968ccb2a47e80c6c1"},
