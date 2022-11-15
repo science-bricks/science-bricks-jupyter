@@ -1,0 +1,9 @@
+content:
+  path: "./../../content/"
+  allowed_extensions:
+    - ".ipynb"
+    - ".md"
+
+  excluded_paths:
+    - ".venv"
+    - ".ipynb_checkpoints"
